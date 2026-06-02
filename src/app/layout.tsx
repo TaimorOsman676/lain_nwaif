@@ -1,0 +1,44 @@
+import React, { ReactNode } from "react";
+import { Cairo, Inter } from "next/font/google";
+import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import { Metadata } from "next";
+
+const cairo = Cairo({
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-cairo",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: "مؤسسة لين نوايف العقيدي للتكييف | Lain Nuawaf Al-Aqeedi Est.",
+  description: "الخيار الأول للتكييف والأعمال الإلكتروميكانيكية بالرياض والخرج. تصميم، توريد وتصنيع مجاري الهواء (الدكت) وأنظمة VRF والشيلر وفق رؤية 2030.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="ar" dir="rtl" className={`${cairo.variable} ${inter.variable}`} suppressHydrationWarning>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body className="bg-brand-bg text-brand-slate min-h-screen flex flex-col transition-all duration-300" suppressHydrationWarning>
+        <LanguageProvider>
+          {children}
+          <FloatingWhatsApp />
+        </LanguageProvider>
+      </body>
+    </html>
+  );
+}
