@@ -10,10 +10,10 @@ export const translations: Record<string, any> = {
       cta: "احصل على استشارة"
     },
     hero: {
-      badge: "الخيار الأول في المملكة",
+      badge: "طلب تسعيرة مجانية - فنيون معتمدون تحت إشراف هندسي",
       title1: "ارتقِ بتجربة",
       title2: "التكييف الخاصة بك مع الحلول الذكية",
-      subtitle: "نقدم حلول التكييف المتكاملة، تركيبات الدكت، وأنظمة التهوية المصممة هندسياً للمشاريع السكنية والتجارية والحكومية في الرياض والخرج، مع الالتزام التام بكفاءة الطاقة ورؤية المملكة 2030.",
+      subtitle: "نقدم حلول التكييف المتكاملة، تركيبات الدكت، وأنظمة التهوية المصممة هندسياً للمشاريع السكنية والتجارية والحكومية في الرياض والخرج. ضمان معتمد ومطابق لكود البناء السعودي وكفاءة الطاقة ورؤية المملكة 2030.",
       ctaCall: "اتصل الآن",
       ctaContact: "تواصل معنا",
       guarantees: [
@@ -368,10 +368,10 @@ export const translations: Record<string, any> = {
       cta: "Request Consultation"
     },
     hero: {
-      badge: "The Premier HVAC Partner in Saudi Arabia",
+      badge: "Free Technical Quote - Certified HVAC Engineers",
       title1: "Elevate Your Climate",
       title2: "Experience With Intelligent Solutions",
-      subtitle: "Providing turnkey, engineered cooling, duct installations, and complete ventilation infrastructure across residential, commercial, and government sectors in Riyadh and Al-Kharj. Built to deliver maximum energy efficiency.",
+      subtitle: "Providing turnkey, engineered cooling, duct installations, and complete ventilation infrastructure across residential, commercial, and government sectors in Riyadh and Al-Kharj. Fully certified, compliant with the Saudi Building Code, and optimized for maximum energy efficiency in alignment with Vision 2030.",
       ctaCall: "Call Now",
       ctaContact: "Contact Us",
       guarantees: [

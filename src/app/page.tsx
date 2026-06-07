@@ -220,7 +220,7 @@ export default function Home() {
             {t("hero.subtitle")}
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-14">
+          <div className="flex flex-wrap gap-4 mb-8">
             <a href="tel:+966530985071" className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-yellow hover:bg-brand-yellowDark text-brand-slate font-bold text-base rounded-full shadow-gold hover:-translate-y-0.5 transition-all duration-300 border-none no-underline cursor-pointer">
               <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -230,6 +230,22 @@ export default function Home() {
             <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-white border border-brand-slate hover:bg-brand-slate hover:text-white text-brand-slate font-bold text-base rounded-full hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer">
               {t("hero.ctaContact")}
             </Link>
+          </div>
+
+          {/* Hero Trust Badges */}
+          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-12 text-xs md:text-sm font-black text-brand-slate">
+            <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
+              <span className="text-green-500 text-sm font-bold">✓</span>
+              {lang === "ar" ? "صيانة وتوريد 24/7" : "24/7 Support & Supply"}
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
+              <span className="text-green-500 text-sm font-bold">✓</span>
+              {lang === "ar" ? "أسعار تنافسية بدون رسوم مخفية" : "Transparent Pricing - No Hidden Fees"}
+            </span>
+            <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
+              <span className="text-green-500 text-sm font-bold">✓</span>
+              {lang === "ar" ? "مهندسون وفنيون معتمدون" : "SCE Certified Engineers"}
+            </span>
           </div>
 
           {/* Guarantees Matrix */}
@@ -260,6 +276,33 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Urgency Promo Bar */}
+      <div className="bg-brand-slate text-white py-4 border-b border-brand-yellow/30 z-20 relative">
+        <div className="container mx-auto px-5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-3 text-center md:text-left">
+            <span className="w-2.5 h-2.5 rounded-full bg-brand-yellow animate-ping hidden sm:inline-block"></span>
+            <strong className="text-sm md:text-base tracking-tight font-black text-brand-yellow">
+              {lang === "ar" ? "عرض خاص لفترة محدودة:" : "Limited Time Offer:"}
+            </strong>
+            <span className="text-xs md:text-sm font-bold text-gray-200">
+              {lang === "ar" 
+                ? "احصل على معاينة مجانية لمشروعك اليوم - اتصل الآن" 
+                : "Get a free site survey for your project today - Call now"}
+            </span>
+          </div>
+          <a 
+            href="tel:+966530985071" 
+            className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-brand-yellow hover:bg-brand-yellowDark text-brand-slate font-black text-xs rounded-full transition-all duration-300 shadow-gold no-underline cursor-pointer border-none"
+          >
+            <span>{lang === "ar" ? "احجز موعدك الآن" : "Book Survey Now"}</span>
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
 
       {/* Metrics Row */}
       <section className="bg-white border-y border-gray-100 py-12">

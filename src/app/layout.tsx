@@ -3,6 +3,7 @@ import { Cairo, Inter } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import MobileCTAOverlay from "@/components/MobileCTAOverlay";
 import { Metadata } from "next";
 
 const cairo = Cairo({
@@ -33,10 +34,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className="bg-brand-bg text-brand-slate min-h-screen flex flex-col transition-all duration-300" suppressHydrationWarning>
+      <body className="bg-brand-bg text-brand-slate min-h-screen flex flex-col transition-all duration-300 pb-20 md:pb-0" suppressHydrationWarning>
         <LanguageProvider>
           {children}
           <FloatingWhatsApp />
+          <MobileCTAOverlay />
         </LanguageProvider>
       </body>
     </html>
