@@ -78,13 +78,12 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Right Side: Quick Hours badge or general info */}
-          <div className="flex items-center gap-3">
-            <span className="hidden lg:inline-flex items-center gap-1.5 text-white/50">
-              <span>{lang === "ar" ? "السبت - الخميس: 8 صباحاً - 6 مساءً" : "Sat - Thu: 8 AM - 6 PM"}</span>
-            </span>
-            <span className="bg-brand-yellow text-brand-slate px-2 py-0.5 rounded text-[10px] font-black tracking-wider uppercase">
-              {lang === "ar" ? "الرياض فقط" : "Riyadh Only"}
+          {/* Right Side: Professional Tagline */}
+          <div className="hidden md:flex items-center gap-2">
+            <span className="text-[10px] md:text-xs font-semibold text-white/70">
+              {lang === "ar" 
+                ? "مشاريع التكييف والتهوية الميكانيكية تحت إشراف هندسي"
+                : "Engineered HVAC & Mechanical Ventilation Projects"}
             </span>
           </div>
         </div>
