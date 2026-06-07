@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import BrandsGrid from "@/components/BrandsGrid";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Services() {
@@ -236,6 +237,8 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      <BrandsGrid />
 
       <Footer />
     </>
