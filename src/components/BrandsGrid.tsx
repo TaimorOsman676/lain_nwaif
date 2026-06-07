@@ -31,8 +31,8 @@ export default function BrandsGrid() {
       image: "/images/brand_carrier.png",
       altAr: "تركيب وصيانة أنظمة تكييف كاريير بالرياض",
       altEn: "Installation and maintenance of Carrier HVAC systems in Riyadh",
-      seoKeywordsAr: "مكيفات كاريير مركزي الرياض صيانة تكييف كاريير الخرج",
-      seoKeywordsEn: "Carrier central AC Riyadh Carrier package unit Al-Kharj"
+      seoKeywordsAr: "مكيفات كاريير مركزي الرياض صيانة تكييف كاريير بالرياض",
+      seoKeywordsEn: "Carrier central AC Riyadh Carrier package unit"
     },
     {
       id: "trane",
@@ -41,8 +41,8 @@ export default function BrandsGrid() {
       subAr: "مكيفات باكج ووحدات معالجة الهواء",
       subEn: "Rooftop Packaged & AHU Units",
       image: "/images/brand_york.png",
-      altAr: "تركيب مكيفات باكج ترين في الخرج",
-      altEn: "Installation of Trane packaged AC units in Al-Kharj",
+      altAr: "تركيب مكيفات باكج ترين في الرياض",
+      altEn: "Installation of Trane packaged AC units in Riyadh",
       seoKeywordsAr: "مكيفات باكج ترين الرياض صيانة ترين مركزي",
       seoKeywordsEn: "Trane packaged AC Riyadh Trane chiller maintenance"
     },
@@ -89,9 +89,9 @@ export default function BrandsGrid() {
       subAr: "شيلرات المياه ومكيفات الباكج الكبيرة",
       subEn: "Water Chillers & Rooftop Packages",
       image: "/images/brand_york.png",
-      altAr: "صيانة شيلرات يورك بالرياض والخرج",
+      altAr: "صيانة شيلرات يورك بالرياض",
       altEn: "York chiller plant maintenance Riyadh",
-      seoKeywordsAr: "صيانة شيلر يورك الرياض مكيفات باكج يورك الخرج",
+      seoKeywordsAr: "صيانة شيلر يورك الرياض مكيفات باكج يورك",
       seoKeywordsEn: "York chiller maintenance Riyadh York package unit"
     },
     {
@@ -103,7 +103,7 @@ export default function BrandsGrid() {
       image: "/images/brand_daikin.png",
       altAr: "تركيب تكييف إل جي مركزي بالرياض",
       altEn: "LG Multi V VRF installation in Riyadh",
-      seoKeywordsAr: "تكييف إل جي VRF الرياض مكيفات إل جي مركزي الخرج",
+      seoKeywordsAr: "تكييف إل جي VRF الرياض مكيفات إل جي مركزي بالرياض",
       seoKeywordsEn: "LG Multi V VRF Riyadh LG commercial AC"
     }
   ];
@@ -118,7 +118,7 @@ export default function BrandsGrid() {
       image: "/images/brand_gree.png",
       altAr: "تركيب مكيفات دكت سبليت جري بالرياض",
       altEn: "Gree ducted split AC installation in Riyadh",
-      seoKeywordsAr: "مكيفات جري دكت سبليت الرياض تركيب سبليت جري الخرج",
+      seoKeywordsAr: "مكيفات جري دكت سبليت الرياض تركيب سبليت جري",
       seoKeywordsEn: "Gree ducted split Riyadh Gree wall split AC"
     },
     {
@@ -128,8 +128,8 @@ export default function BrandsGrid() {
       subAr: "مكيفات الدكت والسبليت السقفية",
       subEn: "High-Efficiency Ducted & Cassette AC",
       image: "/images/brand_gree.png",
-      altAr: "تركيب مكيفات ميديا دكت سبليت في الخرج",
-      altEn: "Midea ducted split installation in Al-Kharj",
+      altAr: "تركيب مكيفات ميديا دكت سبليت في الرياض",
+      altEn: "Midea ducted split installation in Riyadh",
       seoKeywordsAr: "مكيفات ميديا دكت سبليت الرياض صيانة ميديا كاسيت",
       seoKeywordsEn: "Midea ducted split Riyadh Midea cassette AC"
     },
@@ -140,7 +140,7 @@ export default function BrandsGrid() {
       subAr: "الوحدات المجمعة وتكييف باكج وطني",
       subEn: "Saudi Packaged Units & Ducted AC",
       image: "/images/brand_zamil.png",
-      altAr: "تركيب مكيفات الزامل باكج بالرياض والخرج",
+      altAr: "تركيب مكيفات الزامل باكج بالرياض",
       altEn: "Zamil packaged AC installation in Riyadh",
       seoKeywordsAr: "تكييف الزامل باكج الرياض صيانة الزامل مركزي",
       seoKeywordsEn: "Zamil packaged AC Riyadh Zamil ducted split"
@@ -166,7 +166,7 @@ export default function BrandsGrid() {
       image: "/images/brand_gree.png",
       altAr: "تركيب مكيفات فوجي دكت سبليت بالرياض",
       altEn: "Fuji Electric ducted split installation in Riyadh",
-      seoKeywordsAr: "مكيفات فوجي دكت سبليت الرياض صيانة مكيفات فوجي الخرج",
+      seoKeywordsAr: "مكيفات فوجي دكت سبليت الرياض صيانة مكيفات فوجي بالرياض",
       seoKeywordsEn: "Fuji Electric ducted split Riyadh Fuji AC maintenance"
     },
     {
@@ -250,8 +250,8 @@ export default function BrandsGrid() {
           </h2>
           <p className="text-brand-muted text-sm md:text-base">
             {lang === "ar"
-              ? "نصمم ونركب ونقوم بصيانة أنظمة التبريد لكبرى الشركات العالمية والمحلية في الرياض والخرج بكفاءة هندسية مطلقة."
-              : "We design, install, and service cooling layouts from leading global and regional manufacturers in Riyadh & Al-Kharj."}
+              ? "نصمم ونركب ونقوم بصيانة أنظمة التبريد لكبرى الشركات العالمية والمحلية في الرياض بكفاءة هندسية مطلقة."
+              : "We design, install, and service cooling layouts from leading global and regional manufacturers in Riyadh."}
           </p>
         </div>
 

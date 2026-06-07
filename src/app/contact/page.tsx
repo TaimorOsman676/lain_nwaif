@@ -133,15 +133,14 @@ export default function Contact() {
 
               </div>
 
-              {/* Coverage Geography Area Card */}
               <div className="bg-white border border-gray-100 p-8 rounded-lg shadow-premium">
                 <h3 className="text-base font-bold text-brand-slate mb-3">
                   {lang === "ar" ? "نطاق التغطية الجغرافية للمشاريع" : "Geographical Coverage Area"}
                 </h3>
                 <p className="text-xs text-brand-muted leading-relaxed mb-6">
                   {lang === "ar"
-                    ? "نقدم خدماتنا ونغطي بشكل كامل مدينة الرياض الكبرى ومحافظة الخرج والمناطق والمدن الصناعية التابعة للمنطقة الوسطى بالمملكة."
-                    : "We provide our services and mainly cover Riyadh city, Al-Kharj province, and all industrial zones and cities belonging to the Central Region in the Kingdom."}
+                    ? "نقدم خدماتنا ونغطي بشكل كامل مدينة الرياض الكبرى والمناطق والمدن الصناعية التابعة لها بالمملكة."
+                    : "We provide our services and mainly cover the greater Riyadh city and all industrial zones and cities belonging to it in the Kingdom."}
                 </p>
                 
                 {/* Dynamic Styled Coverage Map Placeholder */}
@@ -154,7 +153,7 @@ export default function Contact() {
                   </div>
                   
                   <span className="text-xs font-bold text-brand-slate relative z-10">
-                    {lang === "ar" ? "تغطية كاملة للمنطقة الوسطى" : "Full Central Region Coverage"}
+                    {lang === "ar" ? "تغطية كاملة لمدينة الرياض" : "Full Riyadh City Coverage"}
                   </span>
                 </div>
               </div>

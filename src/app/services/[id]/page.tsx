@@ -161,13 +161,13 @@ export default function ServiceDetail({ params }: PageProps) {
       maintenance: {
         ar: [
           "عقود صيانة وقائية سنوية (PPM) لجميع المنشآت لضمان كفاءة التبريد وإطالة عمر الأجهزة",
-          "فريق طوارئ هندسي لإصلاح الأعطال الطارئة على مدار الساعة 24/7 بالرياض والخرج",
+          "فريق طوارئ هندسي لإصلاح الأعطال الطارئة على مدار الساعة 24/7 بالرياض",
           "فحص وضبط شحن الفريون، غسيل المكثفات الكيميائي، وتطهير فلاتر الهواء ومسارات التصريف",
           "استخدام قطع غيار أصلية ومضمونة لوحدات كاريير (Carrier)، ترين (Trane)، ويورك (York)"
         ],
         en: [
           "Structured Planned Preventative Maintenance (PPM) contracts protecting your cooling assets",
-          "Emergency mechanical response teams responding to sudden failures 24/7 in Riyadh & Al-Kharj",
+          "Emergency mechanical response teams responding to sudden failures 24/7 in Riyadh",
           "Refrigerant leak testing, chemical coil washing, filter cleaning, and drain purging",
           "Exclusive usage of genuine OEM replacement parts for Carrier, Trane, York, and Samsung"
         ]

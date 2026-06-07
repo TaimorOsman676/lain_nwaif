@@ -13,7 +13,7 @@ export default function ContactForm() {
     subject: "",
     message: "",
     category: "commercial",
-    location: "riyadh"
+    location: "riyadh_north"
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
 
@@ -37,7 +37,7 @@ export default function ContactForm() {
         subject: "",
         message: "",
         category: "commercial",
-        location: "riyadh"
+        location: "riyadh_north"
       });
     } catch (err) {
       setStatus("error");
@@ -163,9 +163,11 @@ export default function ContactForm() {
             onChange={handleChange}
             className="w-full px-4 py-3 bg-brand-bg border border-gray-200 rounded-md text-brand-slate focus:border-brand-yellow focus:ring-2 focus:ring-brand-yellow/10 transition-all outline-none"
           >
-            <option value="riyadh">{lang === "ar" ? "الرياض" : "Riyadh"}</option>
-            <option value="kharj">{lang === "ar" ? "الخرج" : "Al-Kharj"}</option>
-            <option value="other">{lang === "ar" ? "المنطقة الوسطى (أخرى)" : "Other Central Region"}</option>
+            <option value="riyadh_north">{lang === "ar" ? "شمال الرياض" : "North Riyadh"}</option>
+            <option value="riyadh_south">{lang === "ar" ? "جنوب الرياض" : "South Riyadh"}</option>
+            <option value="riyadh_east">{lang === "ar" ? "شرق الرياض" : "East Riyadh"}</option>
+            <option value="riyadh_west">{lang === "ar" ? "غرب الرياض" : "West Riyadh"}</option>
+            <option value="riyadh_center">{lang === "ar" ? "وسط الرياض" : "Central Riyadh"}</option>
           </select>
         </div>
       </div>
