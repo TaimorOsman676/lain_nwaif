@@ -207,49 +207,66 @@ export default function Home() {
         </div>
 
         <div className="container mx-auto px-5 z-10 relative">
-          <span className="inline-block bg-brand-yellowLight text-brand-yellowDark border border-brand-yellow/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
-            {t("hero.badge")}
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-slate leading-tight max-w-4xl mb-6">
-            <span>{t("hero.title1")} </span>
-            <span className="bg-gradient-to-r from-brand-yellowDark to-brand-yellow bg-clip-text text-transparent inline-block">
-              {t("hero.title2")}
-            </span>
-          </h1>
-          <p className="text-base md:text-lg text-brand-muted leading-relaxed max-w-2xl mb-10">
-            {t("hero.subtitle")}
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left Column: Copy & Actions */}
+            <div className="lg:col-span-7 flex flex-col items-start text-start">
+              <span className="inline-block bg-brand-yellowLight text-brand-yellowDark border border-brand-yellow/20 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-6">
+                {t("hero.badge")}
+              </span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-brand-slate leading-tight max-w-4xl mb-6">
+                <span>{t("hero.title1")} </span>
+                <span className="bg-gradient-to-r from-brand-yellowDark to-brand-yellow bg-clip-text text-transparent inline-block">
+                  {t("hero.title2")}
+                </span>
+              </h1>
+              <p className="text-base md:text-lg text-brand-muted leading-relaxed max-w-2xl mb-10">
+                {t("hero.subtitle")}
+              </p>
 
-          <div className="flex flex-wrap gap-4 mb-8">
-            <a href="tel:+966530985071" className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-yellow hover:bg-brand-yellowDark text-brand-slate font-bold text-base rounded-full shadow-gold hover:-translate-y-0.5 transition-all duration-300 border-none no-underline cursor-pointer">
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-              </svg>
-              <span>{t("hero.ctaCall")}</span>
-            </a>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-white border border-brand-slate hover:bg-brand-slate hover:text-white text-brand-slate font-bold text-base rounded-full hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer">
-              {t("hero.ctaContact")}
-            </Link>
+              <div className="flex flex-wrap gap-4 mb-8">
+                <a href="tel:+966530985071" className="inline-flex items-center gap-2 px-7 py-3.5 bg-brand-yellow hover:bg-brand-yellowDark text-brand-slate font-bold text-base rounded-full shadow-gold hover:-translate-y-0.5 transition-all duration-300 border-none no-underline cursor-pointer">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                  <span>{t("hero.ctaCall")}</span>
+                </a>
+                <Link href="/contact" className="inline-flex items-center gap-2 px-7 py-3.5 bg-white border border-brand-slate hover:bg-brand-slate hover:text-white text-brand-slate font-bold text-base rounded-full hover:-translate-y-0.5 transition-all duration-300 no-underline cursor-pointer">
+                  {t("hero.ctaContact")}
+                </Link>
+              </div>
+
+              {/* Hero Trust Badges */}
+              <div className="flex flex-wrap items-center gap-x-4 gap-y-3 mb-4 text-xs md:text-sm font-black text-brand-slate">
+                <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
+                  <span className="text-green-500 text-sm font-bold">✓</span>
+                  {lang === "ar" ? "صيانة وتوريد 24/7" : "24/7 Support & Supply"}
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
+                  <span className="text-green-500 text-sm font-bold">✓</span>
+                  {lang === "ar" ? "أسعار تنافسية بدون رسوم مخفية" : "Transparent Pricing - No Hidden Fees"}
+                </span>
+                <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
+                  <span className="text-green-500 text-sm font-bold">✓</span>
+                  {lang === "ar" ? "مهندسون وفنيون معتمدون" : "SCE Certified Engineers"}
+                </span>
+              </div>
+            </div>
+
+            {/* Right Column: Breathtaking Responsive Image Card */}
+            <div className="lg:col-span-5 relative w-full h-[320px] sm:h-[400px] lg:h-[480px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
+              <Image
+                src="/images/hero_attractive.png"
+                alt={lang === "ar" ? "تركيبات تكييف ميكانيكي حديثة الرياض" : "Premium mechanical HVAC installation Riyadh"}
+                fill
+                sizes="(max-width: 1024px) 100vw, 40vw"
+                className="object-cover hover:scale-105 transition-transform duration-500"
+                priority
+              />
+            </div>
           </div>
 
-          {/* Hero Trust Badges */}
-          <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mb-12 text-xs md:text-sm font-black text-brand-slate">
-            <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
-              <span className="text-green-500 text-sm font-bold">✓</span>
-              {lang === "ar" ? "صيانة وتوريد 24/7" : "24/7 Support & Supply"}
-            </span>
-            <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
-              <span className="text-green-500 text-sm font-bold">✓</span>
-              {lang === "ar" ? "أسعار تنافسية بدون رسوم مخفية" : "Transparent Pricing - No Hidden Fees"}
-            </span>
-            <span className="flex items-center gap-1.5 bg-white/70 backdrop-blur border border-gray-100/60 px-3.5 py-2 rounded-full shadow-premium">
-              <span className="text-green-500 text-sm font-bold">✓</span>
-              {lang === "ar" ? "مهندسون وفنيون معتمدون" : "SCE Certified Engineers"}
-            </span>
-          </div>
-
-          {/* Guarantees Matrix */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-gray-200/60 max-w-4xl">
+          {/* Guarantees Matrix & Info */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 border-t border-gray-200/60 max-w-4xl mt-16">
             {t("hero.guarantees").map((item: any, index: number) => (
               <div key={index} className="flex gap-4 items-start">
                 <div className="w-8 h-8 rounded-full bg-brand-yellowLight text-brand-yellowDark flex items-center justify-center flex-shrink-0">
