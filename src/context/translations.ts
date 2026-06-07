@@ -32,7 +32,7 @@ export const translations: Record<string, any> = {
     ],
     services: {
       title: "خدمات التكييف والتهوية",
-      subtitle: "حلول إلكتروميكانيكية وتكييف متكاملة تلبي جميع متطلبات المشاريع",
+      subtitle: "حلول إلكتروميكانيكية وتكييف متكاملة تلبي جميع متطلبات المشاريع في الرياض والخرج",
       filterAll: "الكل",
       filterCommercial: "تكييف تجاري",
       filterResidential: "تكييف سكني",
@@ -40,49 +40,184 @@ export const translations: Record<string, any> = {
       viewDetails: "تفاصيل الخدمة والمواصفات",
       items: {
         vrf: {
-          title: "أنظمة التكييف المتغير VRF",
+          title: "أنظمة التكييف المتغير VRF / VRV",
           category: "commercial",
-          shortDesc: "أنظمة التكييف المتغير المتطورة لتوفير طاقة استثنائي يصل إلى 30٪ للمباني الكبيرة والمنشآت التجارية مع تحكم حراري مستقل لمناطق متعددة."
+          shortDesc: "تكييف VRF متطور يوفر حتى 30% من الكهرباء لمجمعات الرياض والخرج. نوفر تخطيطاً هندسياً للوحدات الموزعة من سامسونج، دايكين، وإل جي مع تحكم ذكي مستقل.",
+          extendedContent: [
+            {
+              heading: "تركيب وتوريد أنظمة تكييف VRF/VRV بالرياض والخرج",
+              text: "تعتبر أنظمة التدفق المتغير للفريون (VRF/VRV) الحل الهندسي الأكثر تطوراً وكفاءة للمباني السكنية الراقية والمجمعات التجارية. توفر هذه الأنظمة مرونة فائقة وتوفيراً استثنائياً في استهلاك الطاقة الكهربائية يصل إلى 30% مقارنة بالأنظمة التقليدية. مؤسسة لين نوايف العقيدي للتكييف هي مقاول معتمد لتوريد وتركيب أنظمة VRF من كبرى الماركات العالمية الرائدة مثل سامسونج (Samsung)، دايكين (Daikin)، جري (Gree)، وإل جي (LG)، مما يضمن أعلى معايير الجودة والضمان الفعلي."
+            },
+            {
+              heading: "تصميم شبكات النحاس وتوزيع الوحدات طبقاً للمواصفات الهندسية",
+              text: "يقوم طاقمنا الهندسي بحساب الأحمال الحرارية للمبنى بدقة وتصميم مسارات مواسير النحاس وحجم المفرعات (Y-Joints) لضمان تدفق متوازن للفريون لجميع الوحدات الداخلية وتفادي أي فاقد في كفاءة التبريد. نلتزم التزاماً كاملاً بكود البناء السعودي واشتراطات الهيئة السعودية للمهندسين لضمان أداء مستدام وعمر افتراضي أطول للنظام."
+            }
+          ]
         },
         central: {
-          title: "التكييف المركزي",
+          title: "التكييف المركزي (المجمّع)",
           category: "commercial",
-          shortDesc: "نتخصص في تصميم وتركيب أنظمة التكييف المركزي للفلل والقصور والمجمعات التجارية. نوفر حلولاً متكاملة تشمل مجاري الهواء والعزل الحراري لضمان توزيع متساوي وكفاءة استهلاك الطاقة."
+          shortDesc: "تصميم وتركيب أنظمة التكييف المركزي للقصور والفلل والمجمعات التجارية بالرياض. نوفر مسارات دكت معزولة هندسياً لضمان تدفق هادئ وتبريد متوازن.",
+          extendedContent: [
+            {
+              heading: "مقاولات التكييف المركزي للمشاريع بالرياض والخرج",
+              text: "نتخصص في تصميم وهندسة وتركيب مكيفات الهواء المركزية للفلل الكبيرة، القصور، والمباني التجارية والصناعية. تشمل خدماتنا توفير دراسات وحسابات دقيقة لحجم تدفق الهواء (CFM) وتصنيع مجاري الهواء (الدكت) من أجود خامات الحديد المجلفن المقاوم للصدأ مع العزل الحراري الفائق لمنع تكثف الرطوبة وضمان تشغيل هادئ ومريح."
+            },
+            {
+              heading: "توريد مكيفات كاريير وترين ويورك المركزية بمواصفات قياسية",
+              text: "من خلال شراكاتنا الوثيقة مع وكلاء ماركات التكييف المركزي العالمية مثل كاريير (Carrier)، ترين (Trane)، ويورك (York)، نوفر لعملائنا أفضل الوحدات ذات الكفاءة العالية والمتوافقة تماماً مع معايير الهيئة السعودية للمواصفات والمقاييس والجودة (SASO) مع تقديم شهادات ضمان حقيقية ومعتمدة."
+            }
+          ]
         },
         concealed: {
-          title: "التكييف المخفي - الدكت سبليت",
+          title: "التكييف المخفي - دكت سبليت",
           category: "residential",
-          shortDesc: "أنظمة التكييف المخفي التي تجمع بين الأناقة المطلقة والأداء العالي، حيث تختفي الوحدة بالكامل داخل السقف المستعار لضمان الحفاظ على ديكور المكان مع توزيع هواء مثالي هادئ وعالي الجودة."
+          shortDesc: "تكييف دكت سبليت مخفي يجمع بين الأناقة المعمارية والتبريد الهادئ الفعال. تمديدات مثالية متوافقة مع وحدات كاريير، جري، وسامسونج بالمنطقة الوسطى.",
+          extendedContent: [
+            {
+              heading: "تركيب تكييف مخفي دكت سبليت كاريير بالرياض والخرج",
+              text: "يعد التكييف المخفي (دكت سبليت) الخيار المفضل للمجالس المفتوحة، الفلل السكنية الفاخرة، والمكاتب الراقية، حيث يجمع بين جمال التصميم الداخلي وقوة الأداء. يتم إخفاء الوحدات بالكامل داخل الأسقف المستعارة وتوجيه الهواء البارد عبر مجاري صاج مخصصة لينساب بهدوء من خلال جريلات خطية أنيقة تتكامل مع الديكور الداخلي والجبس."
+            },
+            {
+              heading: "توافق مثالي مع وحدات جري، سامسونج، وإل جي",
+              text: "نقوم بتصميم مسارات الدكت وصناديق توزيع الهواء (Plenum Boxes) وتجهيزها بكواتم الصوت الداخلية ومواد العزل الحراري المقاومة للحريق. نضمن توافقاً كاملاً مع وحدات التكييف المخفي من ماركات جري (Gree)، سامسونج (Samsung)، كاريير (Carrier)، وإل جي (LG) لضمان تدفق هواء نقي وهادئ تماماً وخالٍ من أي اهتزازات."
+            }
+          ]
         },
         chiller: {
-          title: "أنظمة الشيلر",
+          title: "أنظمة الشيلر وأبراج التبريد",
           category: "commercial",
-          shortDesc: "محطات تبريد المياه الضخمة المصممة خصيصاً للمشاريع الضخمة والمجمعات الصناعية والتجارية بالمنطقة الوسطى لضمان أداء مستدام."
+          shortDesc: "تصميم وصيانة محطات تبريد المياه الضخمة (Chillers) وأبراج التبريد للمصانع والمنشآت التجارية بالرياض. عمرة ضواغط كاريير ويورك بكفاءة هندسية.",
+          extendedContent: [
+            {
+              heading: "تركيب وصيانة شيلرات المياه بالمنطقة الوسطى للمملكة",
+              text: "تعتبر أنظمة تبريد المياه (Chilller Systems) الركيزة الأساسية لتبريد المنشآت الضخمة مثل المستشفيات، الأبراج السكنية، والمصانع الكبيرة. تمتلك مؤسسة لين نوايف الكفاءة الفنية اللازمة لتركيب وصيانة هذه الأنظمة المعقدة بما يضمن ديمومة التبريد وتقليل الهدر في استهلاك الطاقة الكهربائية تحت أشد ظروف المناخ حرارة بالرياض والخرج."
+            },
+            {
+              heading: "عمرة ضواغط شيلر كاريير ويورك وترين بأيدي خبراء",
+              text: "نوفر خدمات الصيانة التخصصية الشاملة لمحطات الشيلر وتشمل عملات الضواغط (Overhauls)، صيانة وتنظيف أبراج التبريد (Cooling Towers)، ومعالجة كيميائية للمياه لمنع التكلس وتراكم الأملاح، متعاملين مع أنظمة كاريير (Carrier)، يورك (York)، ترين (Trane)، ودايكن (Daikin) بموثوقية هندسية عالية."
+            }
+          ]
         },
         crac: {
-          title: "وحدات غرف الخوادم CRAC",
+          title: "وحدات غرف الخوادم الحساسة CRAC",
           category: "support",
-          shortDesc: "نوفر وحدات تكييف غرف الحاسب الآلي (CRAC) المصممة خصيصاً لمراكز البيانات وغرف السيرفرات لضمان ثبات درجة الحرارة والرطوبة 24/7."
+          shortDesc: "تكييف الدقة (Precision AC) لمراكز البيانات والاتصالات بالرياض. تبريد مستمر 24/7 مع تحكم دقيق بالحرارة والرطوبة لضمان استمرارية تشغيل 99.99%.",
+          extendedContent: [
+            {
+              heading: "أنظمة تبريد الدقة لغرف السيرفرات ومراكز البيانات بالرياض",
+              text: "تتطلب غرف الحاسب الآلي الحساسة ومراكز البيانات تحكماً فائق الدقة بدرجات الحرارة ومعدلات الرطوبة النسبية على مدار الساعة لمنع تعطل الأجهزة الإلكترونية والخوادم الحساسة. نوفر حلول تكييف الدقة (Precision Air Conditioning / CRAC) المصممة للعمل الشاق والمستمر طوال العام دون توقف."
+            },
+            {
+              heading: "توريد وتركيب ماركات هيتاشي وسامسونج المتخصصة",
+              text: "نقوم بتوريد، برمجة وصيانة أجهزة تكييف الدقة المتطورة من ماركات مثل هيتاشي (Hitachi) وسامسونج (Samsung)، مع توفير حساسات بيئية متطورة وأنظمة تنبيه ذكية لضمان سلامة مراكز البيانات وتطابقها التام مع متطلبات الأمان والتشغيل بنسبة 99.99%."
+            }
+          ]
         },
         split: {
-          title: "مكيف جداري سبليت",
+          title: "مكيفات جدارية سبليت",
           category: "residential",
-          shortDesc: "نوفر أفضل المكيفات الجدارية السبليت من ماركات عالمية مع خدمة التركيب الاحترافي بأسعار مناسبة وكفاءة تبريد عالية للمساحات المحدودة."
+          shortDesc: "توريد وتركيب مكيفات سبليت جدارية من ماركات جري، كاريير، وسامسونج مع تمديد نحاس أمريكي ممتاز لضمان أفضل كفاءة تبريد بغرف منزلك.",
+          extendedContent: [
+            {
+              heading: "توريد وتركيب مكيفات سبليت جدارية بالرياض والخرج",
+              text: "نوفر لعملائنا في القطاعين السكني والتجاري تشكيلة واسعة من المكيفات السبليت الجدارية الموفرة للطاقة. نتميز بالتركيب الاحترافي السريع والتمديد المتقن لمواسير النحاس الأمريكي الأصلي المعزول حرارياً لمنع تسريب الفريون وضمان أعلى كفاءة تبريد ممكنة للمساحات الفردية والغرف والمكاتب."
+            },
+            {
+              heading: "ماركات معتمدة من ساسو: جري وسامسونج وإل جي",
+              text: "نقدم أفضل الأسعار المنافسة لمكيفات جري (Gree)، سامسونج (Samsung)، كاريير (Carrier)، وإل جي (LG) المعتمدة من الهيئة السعودية للمواصفات والمقاييس (SASO)، مع تقديم ضمانات الوكلاء الرسمية وخدمات الصيانة الدورية لما بعد البيع."
+            }
+          ]
         },
         cassette: {
-          title: "مكيف كاسيت سقفي",
+          title: "مكيف كاسيت سقفي للمحلات",
           category: "commercial",
-          shortDesc: "نقدم حلول مكيفات الكاسيت السقفية المثالية للمحلات التجارية والمكاتب لتوزيع الهواء رباعي الاتجاهات دون إشغال مساحات الجدران."
+          shortDesc: "تكييف كاسيت سقفي مثالي للمحلات التجارية، المعارض، والمطاعم بالرياض. توزيع هواء رباعي الاتجاهات هادئ وموفر للمساحة الجدارية.",
+          extendedContent: [
+            {
+              heading: "تركيب مكيفات كاسيت سقفية للمعارض والمحلات بالرياض",
+              text: "تعتبر مكيفات الكاسيت السقفية الحل المثالي للمساحات المفتوحة والصالات التجارية والمكاتب الإدارية. يثبت الجهاز بشكل متكامل داخل السقف المستعار ليوفر توزيعاً ذكياً للهواء في أربعة اتجاهات متساوية، مما يضمن تبريداً متوازناً لكامل المساحة دون التأثير على استغلال الجدران لعرض المنتجات أو الديكورات."
+            },
+            {
+              heading: "توصيلات مائية وتصريف احترافي لوحدات كاريير وجري وسامسونج",
+              text: "نولي اهتماماً بالغاً بتصميم شبكة تصريف مياه التكثيف وتمديدها بميول انسيابية دقيقة لمنع أي تسريب للمياه داخل الأسقف المستعارة. نضمن التركيب الاحترافي لوحدات كاريير (Carrier)، جري (Gree)، وسامسونج (Samsung) وفق أعلى معايير السلامة المهنية."
+            }
+          ]
         },
         maintenance: {
-          title: "صيانة وإصلاح التكييف",
+          title: "عقود صيانة سنوية وإصلاح طوارئ 24/7",
           category: "support",
-          shortDesc: "خدمات صيانة وإصلاح شاملة لجميع أنواع التكييف في الرياض والخرج تشمل الصيانة الوقائية الدورية، إصلاح الأعطال الطارئة، تعبئة الفريون، وتنظيف المكيفات بأيدي فريق فني معتمد."
+          shortDesc: "عقود صيانة وقائية PPM سنوية وإصلاح طارئ للتكييف المركزي ومكيفات الباكج بالرياض والخرج. فحص فريون وغسيل مكثفات بأيدي فنيين معتمدين.",
+          extendedContent: [
+            {
+              heading: "عقود صيانة تكييف سنوية وطوارئ 24/7 بالرياض والخرج",
+              text: "نقدم عقود صيانة وقائية سنوية (PPM) مصممة خصيصاً للمباني الإدارية، المجمعات التجارية والسكنية، والمنشآت الصناعية. يهدف برنامج الصيانة الوقائية إلى الحفاظ على كفاءة التبريد القصوى، تقليل استهلاك الطاقة الكهربائية بشكل ملموس، والحد من الأعطال المفاجئة التي قد تؤثر على سير العمل."
+            },
+            {
+              heading: "صيانة شاملة لمكيفات باكج ودكت سبليت كاريير وترين ويورك",
+              text: "يقوم فريق الصيانة المعتمد لدينا بعمليات الغسيل الدوري للمكثفات والمبخرات، فحص مستويات غاز الفريون، واختبار عمل الضواغط واللوحات الكهربائية لوحدات كاريير (Carrier)، ترين (Trane)، ويورك (York). نوفر قطع الغيار الأصلية مع ضمان جودة الإصلاح وسرعة الاستجابة الطارئة."
+            }
+          ]
         },
         ventilation: {
-          title: "حلول التهوية الميكانيكية",
+          title: "حلول التهوية وشفط الهواء الميكانيكية",
           category: "support",
-          shortDesc: "أنظمة شفط ميكانيكية متكاملة لتبديل واستخلاص الهواء النقي والحفاظ على بيئة داخلية صحية خالية من الرطوبة والروائح والملوثات."
+          shortDesc: "تصميم وتركيب أنظمة شفط وطرد الهواء للمطابخ التجارية والمطاعم والمستودعات بالرياض. توريد مراوح ومخمدات حريق معتمدة من الدفاع المدني.",
+          extendedContent: [
+            {
+              heading: "أنظمة التهوية الميكانيكية وشفط الهواء للمطابخ والمستودعات",
+              text: "تصميم وتركيب أنظمة شفط وتجديد الهواء للمطابخ التجارية، المطاعم، المصانع، ومواقف السيارات المغلقة بالرياض والخرج. نقوم بحساب حجم الهواء المطلوب تجديده هندسياً وتصميم شبكات الدكت المناسبة لسحب الروائح، الأبخرة والحرارة الزائدة، وحقن هواء نقي بديل (Make-up Air) لضمان راحة وسلامة العاملين."
+            },
+            {
+              heading: "مراوح ومخمدات حريق معتمدة من الدفاع المدني والبلدية",
+              text: "نلتزم بتوريد وتركيب مراوح تهوية مطابقة للمواصفات القياسية ومخمدات حريق تلقائية (Fire Dampers) معزولة لضمان سلامة المبنى ومطابقته التامة لاشتراطات الدفاع المدني السعودي والبلديات في المنطقة الوسطى."
+            }
+          ]
+        },
+        design: {
+          title: "تصميم ومخططات التكييف الهندسية للمشاريع",
+          category: "commercial",
+          shortDesc: "إعداد حسابات الأحمال الحرارية ومخططات التكييف التنفيذية (Shop Drawings) للمشاريع بالرياض والخرج وفق كود البناء السعودي ومعايير ASHRAE.",
+          extendedContent: [
+            {
+              heading: "تصميم وحساب أحمال التكييف الهندسي لمشروعك بالرياض والخرج",
+              text: "تبدأ كفاءة التكييف وجودة تدفق الهواء من مرحلة الدراسة الهندسية والتصميم الصحيح. نقوم في مؤسسة لين نوايف العقيدي بإعداد حسابات الأحمال الحرارية للمشاريع بدقة متناهية باستخدام برامج معتمدة عالمياً مثل HAP، وذلك لضمان اختيار القدرات التبريدية المناسبة تماماً للمساحات وتجنب زيادة التكلفة الرأسمالية أو ضعف التبريد."
+            },
+            {
+              heading: "مخططات التكييف التنفيذية وتنسيق مسارات الدكت والمواسير",
+              text: "يقوم مهندسونا بإعداد المخططات التنفيذية (Shop Drawings) ومخططات التنسيق المشتركة (Coordination Drawings) لتجنب أي تعارض بين مسارات الدكت والمواسير والمخططات الإنشائية والمعمارية للمبنى، مع التنسيق مع مخارج التوزيع (Grills) لضمان انتشار مثالي وهادئ للهواء البارد."
+            }
+          ]
+        },
+        duct: {
+          title: "تصنيع وتركيب مجاري الهواء (الدكت)",
+          category: "support",
+          shortDesc: "تصنيع دكت الصاج المجلفن المقاوم للصدأ بمواصفات سمك وجودة عالية في ورش مؤسستنا بالرياض. عزل حراري وصوتي يلتزم بمعايير SMACNA.",
+          extendedContent: [
+            {
+              heading: "تصنيع مجاري الهواء (الدكت) في ورش مؤسستنا بالرياض والخرج",
+              text: "نمتلك في مؤسسة لين نوايف العقيدي ورشاً متكاملة ومجهزة بأحدث ماكينات القص والتشكيل لتصنيع مجاري الهواء (الدكت) من لفائف الصاج المجلفن عالي الجودة بمختلف المقاسات وسماكات الصاج المطلوبة هندسياً، مع الالتزام التام بتوصيات معايير الهيئة العالمية لمقاولي الصاج والتهوية (SMACNA)."
+            },
+            {
+              heading: "عزل صوتي وحراري فائق الجودة لمكافحة التكثف والضجيج",
+              text: "نحرص على استخدام أفضل المواد العازلة للحرارة والصوت (العزل الداخلي والخارجي Fiberglass / Rockwool) لضمان عدم فقد الحرارة ومكافحة تكثف الرطوبة على جدران الدكت، مع تركيب الوصلات المرنة وحشوات منع الاهتزاز (Vibration Isolators) لضمان تشغيل هادئ وخالٍ تماماً من الضجيج الإنشائي."
+            }
+          ]
+        },
+        packaged: {
+          title: "مكيفات الباكج (الوحدات المجمّعة) Rooftop Packaged",
+          category: "commercial",
+          shortDesc: "توريد وتركيب مكيفات الباكج المركزية ترين، كاريير، ويورك للصالات الكبيرة والمساحات المفتوحة بالرياض مع عزل وحماية خارجية للدكت.",
+          extendedContent: [
+            {
+              heading: "تركيب وصيانة مكيفات الباكج المركزية بالرياض والخرج",
+              text: "تعتبر مكيفات الباكج (Rooftop Packaged Units) الخيار الهندسي الأول والأنسب للصالات المفتوحة الكبيرة، معارض السيارات، المساجد، والمنشآت التجارية الضخمة. يتم تركيب هذه الوحدات المجمعة على أسطح المباني وتوصيلها مباشرة بمجاري الهواء (الدكت) لتوزيع التبريد بفاعلية وكفاءة للمبنى بالكامل."
+            },
+            {
+              heading: "توريد مكيفات باكج ترين وكاريير ويورك وسامسونج معتمدة",
+              text: "نوفر لعملائنا خدمات التوريد والتركيب للوحدات المجمعة من كبرى الشركات مثل ترين (Trane)، كاريير (Carrier)، يورك (York)، وسامسونج (Samsung). نلتزم بإنشاء القواعد الخرسانية المتينة مع مخمدات الاهتزاز لحماية السطح، وعزل دفق الهواء الخارجي (Duct Outdoor Insulation) بعوازل مقاومة لعوامل الطقس القاسية."
+            }
+          ]
         }
       }
     },
@@ -255,7 +390,7 @@ export const translations: Record<string, any> = {
     ],
     services: {
       title: "HVAC & Ventilation Services",
-      subtitle: "Comprehensive mechanical contracting and engineering cooling solutions",
+      subtitle: "Comprehensive mechanical contracting and engineering cooling solutions in Riyadh & Al-Kharj",
       filterAll: "All Services",
       filterCommercial: "Commercial HVAC",
       filterResidential: "Residential HVAC",
@@ -263,49 +398,184 @@ export const translations: Record<string, any> = {
       viewDetails: "Service Details & Specs",
       items: {
         vrf: {
-          title: "VRF (Variable Refrigerant Flow)",
+          title: "VRF / VRV System Installations",
           category: "commercial",
-          shortDesc: "Advanced Variable Refrigerant Flow infrastructure optimizing energy footprint up to 30% for commercial towers, offices, and hotels with smart multi-zone temperature controls."
+          shortDesc: "Advanced Variable Refrigerant Flow systems saving up to 30% electricity for Riyadh towers. Structured copper layout and multi-zone controls from Samsung, Daikin, and LG.",
+          extendedContent: [
+            {
+              heading: "VRF/VRV System Installation in Riyadh and Al-Kharj",
+              text: "Variable Refrigerant Flow (VRF/VRV) systems represent the absolute peak of modern electromechanical cooling efficiency. Designed to deliver variable cooling capacities based on real-time load requirements, they offer commercial towers and luxury estates up to 30% electricity savings. Lain Nuawaf Al-Aqeedi Est. is a certified contractor for major international brands including Samsung, Daikin, Gree, and LG, assuring genuine manufacturer warranty and premium installation quality."
+            },
+            {
+              heading: "Copper Pipe Network Design & Load Balancing",
+              text: "Our engineering division calculates structural cooling loads and meticulously models copper piping layouts, branch joint sizes (Y-Joints), and pipe sizing to ensure perfectly balanced refrigerant flow to all indoor units. All layouts are engineered in full compliance with the Saudi Building Code (SBC) and ASHRAE design standards."
+            }
+          ]
         },
         central: {
-          title: "Central Air Conditioning",
+          title: "Central Package Air Conditioning",
           category: "commercial",
-          shortDesc: "Comprehensive structural duct engineering, heavy thermal insulation layout, and smart airflow distribution matrices designed for large-scale premium residential estates, villas, and commercial complexes."
+          shortDesc: "Turnkey central HVAC solutions for palaces, malls, and commercial buildings in Riyadh. Custom steel ducts with high-density thermal insulation.",
+          extendedContent: [
+            {
+              heading: "Central Package AC Contracting in Riyadh & Al-Kharj",
+              text: "We specialize in the engineering, procurement, and construction of central package air conditioning layouts for large commercial malls, wedding halls, and luxurious residential palaces. Our services feature precise CFM air balance audits, structural duct layouts, and high-performance acoustic and thermal insulation to prevent water condensation and keep operations quiet and draft-free."
+            },
+            {
+              heading: "Supply of Carrier, Trane, and York Central Packages",
+              text: "Partnering closely with authorized regional distributors, we supply and install top-tier central package units from Carrier, Trane, and York. All units are fully compliant with Saudi Standards, Metrology and Quality Organization (SASO) requirements, backed by robust manufacturer warranties."
+            }
+          ]
         },
         concealed: {
-          title: "Duct AC / Concealed Split",
+          title: "Concealed Duct Split AC",
           category: "residential",
-          shortDesc: "Sleek, hidden indoor units blending high-output cooling seamlessly with luxury interior aesthetics. Includes full engineering layout planning for ceiling spaces and linear slot installations."
+          shortDesc: "Concealed splits blending high cooling capacity with elegant interior design. Engineered duct runs matched with Gree, Samsung, and Carrier units.",
+          extendedContent: [
+            {
+              heading: "Concealed Duct Split AC Installation in Riyadh & Al-Kharj",
+              text: "Concealed duct split systems offer the perfect compromise between structural aesthetics and high-volume cooling performance. The indoor unit is concealed within the false ceiling void, routing cold air through custom-fabricated sheet metal ducts to linear slot diffusers that integrate seamlessly with modern gypsum drop ceiling profiles."
+            },
+            {
+              heading: "Seamless Compatibility with Gree, Samsung, and LG Units",
+              text: "We fabricate custom duct transitions, plenum boxes, and route insulated refrigerant copper lines to suit Gree, Samsung, Carrier, and LG systems. Incorporating premium acoustic duct liners and anti-vibration mounts, we guarantee whisper-quiet operation and draft-free air distribution."
+            }
+          ]
         },
         chiller: {
-          title: "Chiller Systems",
+          title: "Chiller Plants & Cooling Towers",
           category: "commercial",
-          shortDesc: "Heavy-duty water-cooled chiller plants engineered for massive industrial and district-wide commercial complexes, ensuring long-term reliability."
+          shortDesc: "Water-cooled and air-cooled chiller plants for industrial facilities and large offices in Riyadh. Compressor overhauls for Carrier, York, and Trane.",
+          extendedContent: [
+            {
+              heading: "Water Chiller Plant Installation & Overhauls in Central Region",
+              text: "Chiller systems and cooling towers are the mechanical foundation of district cooling, medical complexes, and large-scale industrial factories. Lain Nuawaf Al-Aqeedi Est. provides specialized mechanical services to design, build, and overhaul chiller plants, ensuring continuous and energy-efficient operations under extreme summer temperatures."
+            },
+            {
+              heading: "Carrier, York, Trane, and Daikin Chiller Overhauls",
+              text: "Our certified mechanical engineers perform comprehensive compressor rebuilds (overhauls), cooling tower repacking, condenser descaling, and chemical water treatment to avoid scaling and biological build-up, maintaining peak heat transfer efficiency for Carrier, York, Trane, and Daikin chillers."
+            }
+          ]
         },
         crac: {
-          title: "CRAC Server Room Cooling",
+          title: "CRAC Data Center Precision Cooling",
           category: "support",
-          shortDesc: "Precise Computer Room Air Conditioning (CRAC) units custom-designed for mission-critical data centers and server halls, managing heat and humidity 24/7."
+          shortDesc: "Precision cooling (CRAC) units for server rooms and data centers in Riyadh. 24/7 heavy-duty operations keeping humidity and temperature locked.",
+          extendedContent: [
+            {
+              heading: "Precision CRAC Cooling for Server Rooms in Riyadh",
+              text: "Server rooms and mission-critical telecommunication facilities require strict temperature and relative humidity thresholds. Our team installs high-performance Computer Room Air Conditioning (CRAC) units engineered for continuous 24/7 operation under heavy thermal loads to prevent equipment failure and ensure structural data safety."
+            },
+            {
+              heading: "Precision cooling layouts from Hitachi & Samsung",
+              text: "We supply, install, and calibrate precision air handlers from Hitachi, Samsung, and other specialized brands, linking them with smart environment monitors and auto-switchover systems to maintain 99.99% data center uptime."
+            }
+          ]
         },
         split: {
-          title: "Wall Split Systems",
+          title: "Wall Mounted Split AC",
           category: "residential",
-          shortDesc: "Supply and professional installation of high-efficiency wall split units from international brands, offering fast, cost-effective cooling for rooms."
+          shortDesc: "Supply and quick installation of wall split units (Gree, Carrier, Samsung) with premium insulated American copper piping.",
+          extendedContent: [
+            {
+              heading: "Wall Split AC Supply & Professional Installation in Riyadh",
+              text: "Wall split systems provide a highly flexible, cost-effective cooling option for individual residential rooms, small offices, and retail units. We offer rapid supply and neat mounting, utilizing premium insulated American copper piping to prevent gas leaks and ensure optimal thermal transfer."
+            },
+            {
+              heading: "Top Brands Certified by SASO: Gree, Samsung, and LG",
+              text: "We provide highly competitive quotes for Gree, Samsung, Carrier, and LG wall splits that are fully certified by the Saudi Standards, Metrology and Quality Organization (SASO), backed by official dealer warranties and our quality-installation guarantee."
+            }
+          ]
         },
         cassette: {
-          title: "Ceiling Cassette AC",
+          title: "Ceiling Cassette AC Systems",
           category: "commercial",
-          shortDesc: "Ceiling-mounted cassette air conditioners providing elegant 4-way air flow, optimal for showrooms, shops, and spacious dining halls."
+          shortDesc: "Ceiling-mounted cassette units for showrooms, retail shops, and dining halls. Uniform 4-way airflow saving wall display areas.",
+          extendedContent: [
+            {
+              heading: "Ceiling Cassette AC for Retail Malls and Offices in Riyadh",
+              text: "Ceiling cassette air conditioners are the premier choice for spacious offices, showrooms, and fine dining halls. Mounted flush with the false ceiling, they provide uniform 4-way air distribution to cool open spaces evenly while keeping valuable wall space free for decoration or displays."
+            },
+            {
+              heading: "Proper Drainage and Mounting (Carrier, Gree, Samsung)",
+              text: "We design and install cassette layouts with precise condensate drain piping angles and mini-pumps to avoid water leakage and protect ceiling tiles, executing projects with Carrier, Gree, and Samsung cassette units."
+            }
+          ]
         },
         maintenance: {
-          title: "HVAC Maintenance & Emergency Repair",
+          title: "Preventative Maintenance & 24/7 Repairs",
           category: "support",
-          shortDesc: "24/7 emergency troubleshooting, preventative asset auditing, structural diagnostic reviews, refrigerant gas top-ups, system coil flushing, and genuine OEM parts replacement guarantees."
+          shortDesc: "Annual Planned Preventative Maintenance (PPM) contracts and 24/7 emergency repair for Carrier, Trane, and York package units in Riyadh.",
+          extendedContent: [
+            {
+              heading: "Annual HVAC Maintenance Contracts & 24/7 Emergency Repairs",
+              text: "We provide structured Planned Preventative Maintenance (PPM) agreements for commercial towers, residential compounds, schools, and industrial warehouses in Riyadh and Al-Kharj. Regular maintenance protects your mechanical assets, reduces energy bills, and prevents costly emergency shutdowns."
+            },
+            {
+              heading: "Maintenance of Carrier, Trane, and York Package & Chiller Units",
+              text: "Our technicians perform coil chemical wash, compressor health checks, electrical panel testing, and freon level calibration. We maintain Carrier, Trane, York, and Samsung units, using genuine OEM parts and offering rapid response for emergency breakdowns."
+            }
+          ]
         },
         ventilation: {
-          title: "Ventilation & Air Extraction",
+          title: "Mechanical Ventilation & Air Extraction",
           category: "support",
-          shortDesc: "Mechanical air extraction and fresh air injection setups establishing fresh, moisture-free indoor air quality in accordance with civil defense standards."
+          shortDesc: "Exhaust and fresh-air injection layouts for commercial kitchens, factories, and basements. Civil Defense approved fans and fire dampers.",
+          extendedContent: [
+            {
+              heading: "Mechanical Ventilation & Air Extraction in Riyadh & Al-Kharj",
+              text: "We design and build complete mechanical ventilation systems for commercial kitchens, factories, closed basements, and warehouse facilities. We calculate air change rates (ACH) to extract fumes, heat, and moisture, installing fresh air injection systems (makeup air) to maintain air quality and pressure."
+            },
+            {
+              heading: "Civil Defense Approved Fire Dampers and Exhaust Fans",
+              text: "All our ventilation layouts incorporate heavy-duty commercial exhaust fans, fire dampers, and fresh air ducts that comply fully with Saudi Civil Defense and municipality safety regulations in the Central region."
+            }
+          ]
+        },
+        design: {
+          title: "HVAC System Design & Engineering Blueprints",
+          category: "commercial",
+          shortDesc: "Cooling load calculations using HAP software and detailed shop drawings compliant with the Saudi Building Code and ASHRAE.",
+          extendedContent: [
+            {
+              heading: "HVAC Load Calculation & System Design in Riyadh & Al-Kharj",
+              text: "High cooling efficiency begins with precise engineering calculations. At Lain Nuawaf Al-Aqeedi Est., we calculate cooling loads using HAP (Hourly Analysis Program) software to match the exact cooling capacity required, avoiding oversized machinery cost or weak under-cooling."
+            },
+            {
+              heading: "Electromechanical Shop Drawings & Utility Coordination",
+              text: "Our engineers draft detailed Shop Drawings and Coordination prints to prevent physical clashes between HVAC duct runs, structural concrete beams, and plumbing pipes, calculating grill sizes for quiet and draft-free air distribution."
+            }
+          ]
+        },
+        duct: {
+          title: "Duct Fabrication & Professional Installation",
+          category: "support",
+          shortDesc: "Sheet metal duct fabrication in our Riyadh workshops matching SMACNA standards. High-density acoustic and thermal insulation.",
+          extendedContent: [
+            {
+              heading: "Galvanized Steel Duct Fabrication in our Riyadh Workshops",
+              text: "Lain Nuawaf Al-Aqeedi Est. operates its own sheet metal fabrication workshops in Riyadh, equipped with automatic shearers and folding machinery. We fabricate galvanized steel air ducts with precise sheet metal gauges and folds, matching SMACNA standards."
+            },
+            {
+              heading: "Thermal Insulation, Vapor Barriers & Vibration Isolation",
+              text: "We wrap our duct runs with high-density fiberglass or rockwool thermal insulation and vapor barriers to prevent thermal loss. All runs are mounted with heavy-duty hangers and anti-vibration gaskets to eliminate structural noise."
+            }
+          ]
+        },
+        packaged: {
+          title: "Rooftop Packaged AC Units",
+          category: "commercial",
+          shortDesc: "Supply and installation of rooftop packaged units (Trane, Carrier, York) for large open halls and mosques with weatherproof outer duct insulation.",
+          extendedContent: [
+            {
+              heading: "Rooftop Packaged HVAC Unit Installation in Riyadh & Al-Kharj",
+              text: "Rooftop packaged AC units are self-contained, high-capacity cooling systems usually installed on roof platforms and connected directly to ducted air distribution. The ideal engineering choice for large open spaces like retail showrooms, mosques, and villas."
+            },
+            {
+              heading: "Carrier, Trane, York, and Samsung Packaged Systems",
+              text: "We supply and mount packaged units from Carrier, Trane, York, and Samsung. We construct robust concrete pads with vibration isolators to protect the building structure and wrap supply/return ducts with weatherproof cladding insulation."
+            }
+          ]
         }
       }
     },

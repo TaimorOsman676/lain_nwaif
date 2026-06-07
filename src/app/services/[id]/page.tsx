@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useLanguage } from "@/context/LanguageContext";
+import { Locale } from "@/types";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -17,7 +18,20 @@ export default function ServiceDetail({ params }: PageProps) {
   const unwrappedParams = use(params);
   const id = unwrappedParams.id;
 
-  const validServices = ["vrf", "central", "concealed", "chiller", "crac", "split", "cassette", "maintenance", "ventilation"];
+  const validServices = [
+    "vrf",
+    "central",
+    "concealed",
+    "chiller",
+    "crac",
+    "split",
+    "cassette",
+    "maintenance",
+    "ventilation",
+    "design",
+    "duct",
+    "packaged"
+  ];
 
   if (!validServices.includes(id)) {
     notFound();
@@ -33,6 +47,12 @@ export default function ServiceDetail({ params }: PageProps) {
         return "/images/chiller_system.png";
       case "maintenance":
         return "/images/maintenance.png";
+      case "design":
+        return "/images/hvac_design.png";
+      case "duct":
+        return "/images/duct_fabrication.png";
+      case "packaged":
+        return "/images/packaged_unit.png";
       default:
         return "/images/hero_hvac.png";
     }
@@ -41,40 +61,172 @@ export default function ServiceDetail({ params }: PageProps) {
   const getSpecs = (key: string): string[] => {
     const specsDict: Record<string, { ar: string[]; en: string[] }> = {
       vrf: {
-        ar: ["توفير طاقة يصل إلى 30%", "تحكم مستقل لكل غرفة بنظام ذكي", "إمكانية توصيل وحدة خارجية واحدة بعشرات الوحدات الداخلية", "مثالي للمباني الفاخرة والمجمعات التجارية"],
-        en: ["Up to 30% energy savings", "Independent room control via smart panel", "Single outdoor unit feeds dozens of indoor units", "Ideal for luxury homes and commercial complexes"]
+        ar: [
+          "توفير طاقة استثنائي يصل إلى 30% بنظام تدفق الفريون المتغير الذكي",
+          "تحكم مستقل مرن لكل غرفة أو زون مع ربطه بنظام إدارة المباني (BMS)",
+          "شريك معتمد لتركيب أجهزة سامسونج (Samsung)، دايكين (Daikin)، وإل جي (LG)",
+          "توافق كامل مع كود البناء السعودي وحسابات الفقد الحراري المعتمدة"
+        ],
+        en: [
+          "Exceptional energy savings up to 30% with smart Variable Refrigerant Flow technology",
+          "Flexible independent control for each room/zone with Building Management System (BMS) linkage",
+          "Certified contractor for Samsung, Daikin, LG, and Gree VRF installations",
+          "Full compliance with the Saudi Building Code (SBC) and approved thermal loss studies"
+        ]
       },
       central: {
-        ar: ["تصميم هندسي متكامل لمجاري الهواء (الدكت)", "عزل حراري وصوتي عالي الكفاءة", "توزيع هواء متساوٍ ومريح في المساحات الواسعة", "أنظمة تحكم ذكية وصيانة ميسرة"],
-        en: ["Full engineering design for air ducts", "High-efficiency thermal and acoustic insulation", "Even and comfortable air distribution in wide areas", "Smart control panels and easy maintenance access"]
+        ar: [
+          "تصميم هندسي متكامل لمسارات مجاري الهواء (الدكت) وصناديق التوزيع",
+          "استخدام صاج مجلفن عالي السماكة مقاوم للصدأ مطابق للمواصفات العالمية",
+          "توريد مكيفات كاريير (Carrier)، ترين (Trane)، ويورك (York) المركزية المعتمدة",
+          "عوازل حرارية وصوتية ممتازة لمنع تكثف الرطوبة والاهتزازات والضجيج"
+        ],
+        en: [
+          "Integrated duct layout engineering, transition calculations, and plenum boxes",
+          "High-gauge galvanized steel sheet metal compliant with international standards",
+          "Authorized supplier of certified Carrier, Trane, and York central package units",
+          "Premium acoustic and thermal insulation preventing condensation, vibration, and noise"
+        ]
       },
       concealed: {
-        ar: ["مظهر عصري مخفي تماماً داخل الأسقف", "ظهور فتحات توزيع الهواء (الجريلات) الأنيقة فقط", "أداء تبريدي ممتاز مع هدوء تام أثناء التشغيل", "خيار ممتاز للفلل والمكاتب الراقية"],
-        en: ["Fully hidden modern design inside false ceilings", "Only elegant linear slot diffusers are visible", "Excellent cooling performance with total silence", "Premium option for upscale villas and offices"]
+        ar: [
+          "مظهر عصري مخفي تماماً داخل الجبس والأسقف المستعارة بمظهر ديكوري راقٍ",
+          "مخارج هواء (جريلات) خطية أنيقة توفر تدفقاً متوازناً وهادئاً للغاية",
+          "متوافق مع مكيفات كاريير (Carrier)، جري (Gree)، وسامسونج (Samsung) المخفية",
+          "حسابات CFM دقيقة وتمديدات نحاسية معزولة بأعلى درجات الكفاءة الفنية"
+        ],
+        en: [
+          "Sleek concealed installation inside false ceilings with luxury interior profiles",
+          "Linear slot diffusers and return air grills providing balanced, whisper-quiet drafts",
+          "Fully compatible with Carrier, Gree, LG, and Samsung ducted split units",
+          "Accurate CFM calculations and premium insulated copper refrigeration runs"
+        ]
       },
       chiller: {
-        ar: ["قدرة تبريد فائقة للمشاريع والمصانع الضخمة", "يعتمد على تبريد المياه الصديق للبيئة", "عمر افتراضي طويل وكفاءة ميكانيكية عالية", "شبكة توزيع مرنة لوحدات معالجة الهواء (AHU)"],
-        en: ["Super cooling capacity for massive projects and factories", "Environmentally friendly water-cooling system", "Long life cycle and high mechanical efficiency", "Flexible distribution network for Air Handling Units (AHU)"]
+        ar: [
+          "قدرة تبريد فائقة للمشاريع الصناعية والأبراج السكنية والمستشفيات بالمنطقة الوسطى",
+          "توريد وصيانة مبردات المياه (Chillers) الهوائية والمائية لضمان كفاءة تشغيلية مستدامة",
+          "عمرة ضواغط شيلر كاريير (Carrier)، يورك (York)، وترين (Trane) بأيدي مهندسين مختصين",
+          "صيانة متكاملة لأبراج التبريد ومبادلات الحرارة والمعالجة الكيميائية للمياه"
+        ],
+        en: [
+          "Super cooling capacity for massive industrial sites, residential towers, and hospitals",
+          "Supply & maintenance of water-cooled and air-cooled chillers for sustainable efficiency",
+          "Certified mechanical compressor overhauls for Carrier, York, Trane, and Daikin chillers",
+          "Turnkey servicing of cooling towers, heat exchangers, and chemical water treatments"
+        ]
       },
       crac: {
-        ar: ["تحكم دقيق بدرجة الحرارة والرطوبة بنسبة خطأ ±1", "تصميم مخصص للعمل الشاق على مدار الساعة 24/7", "حماية المعدات والخوادم الحساسة من الكهرباء الساكنة والغبار", "ضمان استمرارية تشغيل بنسبة 99.99%"],
-        en: ["Precise temperature & humidity control within ±1 margin", "Custom heavy-duty design for 24/7 operation", "Protects sensitive server equipment from static and dust", "Guaranteed uptime up to 99.99%"]
+        ar: [
+          "تكييف الدقة (Precision AC) للتحكم الصارم بالحرارة والرطوبة لغرف السيرفرات",
+          "تصميم مخصص للتشغيل الشاق والمستمر على مدار الساعة 24/7 دون توقف",
+          "شريك توريد وتركيب أجهزة تكييف غرف البيانات من هيتاشي (Hitachi) وسامسونج",
+          "حماية الأجهزة الحساسة من الغبار والكهرباء الساكنة لضمان استمرارية بنسبة 99.99%"
+        ],
+        en: [
+          "Precision Air Conditioning (CRAC) units controlling temperature and relative humidity",
+          "Custom heavy-duty design for continuous 24/7 operations under extreme thermal loads",
+          "Supply and commissioning partner for Hitachi, Samsung, and leading server cooling units",
+          "Protects sensitive hardware from static and dust, securing 99.99% server uptime"
+        ]
       },
       split: {
-        ar: ["خيارات من أفضل الماركات العالمية (قري، توشيبا)", "تركيب احترافي سريع مع ضمان شامل", "أسعار اقتصادية كفاءة تبريد عالية", "توجيه ذكي لتدفق الهواء وفلاتر تنقية متطورة"],
-        en: ["Supplied from top brands (Gree, Toshiba, Basic)", "Fast professional installation with full warranty", "Highly economical with excellent cooling performance", "Smart airflow routing and advanced air filters"]
+        ar: [
+          "مكيفات سبليت جدارية بأسعار اقتصادية وأداء ممتاز للمساحات الفردية والمكاتب",
+          "توريد وتركيب سريع لماركات جري (Gree)، كاريير (Carrier)، وسامسونج (Samsung)",
+          "تمديد وتأسيس مواسير النحاس الأمريكي الأصلي المعزول لمنع تسريب الغاز",
+          "توافق كامل مع مواصفات الهيئة السعودية للمواصفات والمقاييس (SASO)"
+        ],
+        en: [
+          "Economical wall-mounted split units with optimal performance for rooms and offices",
+          "Fast delivery and mounting of Gree, Carrier, Samsung, and LG split systems",
+          "Installation of genuine insulated American copper lines to prevent refrigerant leaks",
+          "100% compliance with Saudi Standards, Metrology and Quality Organization (SASO) ratings"
+        ]
       },
       cassette: {
-        ar: ["توزيع هواء رباعي الاتجاهات لتغطية متساوية", "تصميم سقف أنيق لا يشغل أي مساحات جدارية", "سهل التنظيف ومقاوم للرطوبة وتراكم المياه", "الخيار الأول للمعارض والمطاعم الفاخرة"],
-        en: ["4-way air distribution for uniform coverage", "Elegant ceiling layout that saves wall space", "Easy cleaning and moisture-resistant design", "First choice for showrooms and high-end restaurants"]
+        ar: [
+          "توزيع هواء رباعي الاتجاهات لتغطية متوازنة وشاملة للمساحات التجارية والمطاعم",
+          "تصميم سقف مسطح لا يشغل أي مساحات جدارية ويسهل دمجه بالجبس",
+          "تركيب احترافي لوحدات كاريير (Carrier)، جري (Gree)، وسامسونج (Samsung)",
+          "تأسيس شبكات تصريف المياه بميول دقيقة مع مضخات لمنع أي تسريب"
+        ],
+        en: [
+          "Uniform 4-way air distribution for complete coverage in retail halls and dining zones",
+          "Ceiling-mounted layout saving wall spaces, flush integrated with false ceilings",
+          "Professional mounting of high-efficiency Carrier, Gree, and Samsung cassette units",
+          "Accurate drainage layout planning with built-in mini-pumps to avoid leakage"
+        ]
       },
       maintenance: {
-        ar: ["صيانة وقائية دورية وإصلاح فوري للأعطال", "فريق فني معتمد ومجهز بأحدث أدوات القياس والتشخيص", "تعبئة فريون وتنظيف مجاري وفلاتر التكييف", "استخدام قطع غيار أصلية بضمان حقيقي"],
-        en: ["Periodic preventive maintenance & immediate breakdown repair", "Certified technical team equipped with advanced diagnostic tools", "Freon refill, duct cleaning, and filter replacement", "Genuine spare parts usage with authentic warranty support"]
+        ar: [
+          "عقود صيانة وقائية سنوية (PPM) لجميع المنشآت لضمان كفاءة التبريد وإطالة عمر الأجهزة",
+          "فريق طوارئ هندسي لإصلاح الأعطال الطارئة على مدار الساعة 24/7 بالرياض والخرج",
+          "فحص وضبط شحن الفريون، غسيل المكثفات الكيميائي، وتطهير فلاتر الهواء ومسارات التصريف",
+          "استخدام قطع غيار أصلية ومضمونة لوحدات كاريير (Carrier)، ترين (Trane)، ويورك (York)"
+        ],
+        en: [
+          "Structured Planned Preventative Maintenance (PPM) contracts protecting your cooling assets",
+          "Emergency mechanical response teams responding to sudden failures 24/7 in Riyadh & Al-Kharj",
+          "Refrigerant leak testing, chemical coil washing, filter cleaning, and drain purging",
+          "Exclusive usage of genuine OEM replacement parts for Carrier, Trane, York, and Samsung"
+        ]
       },
       ventilation: {
-        ar: ["أنظمة شفط وتهوية للمطابخ التجارية والمصانع", "تجديد مستمر للهواء وسحب الرطوبة والروائح", "مراوح ومخمدات حريق معتمدة هندسياً", "تصميم يتوافق بالكامل مع معايير الدفاع المدني"],
-        en: ["Exhaust and ventilation systems for commercial kitchens & plants", "Continuous air changes to extract moisture and odors", "Engineered and certified fans and fire dampers", "Full compliance design with Civil Defense requirements"]
+        ar: [
+          "تصميم شبكات تهوية وسحب الهواء للمطابخ التجارية والمطاعم والمستودعات والمواقف",
+          "تجديد الهواء المستمر وحقن هواء نقي بديل (Make-up Air) لضمان ضغط هواء متوازن",
+          "تركيب مراوح طرد ومخمدات حريق معزولة (Fire Dampers) معتمدة هندسياً",
+          "التزام كامل باشتراطات الدفاع المدني السعودي والبلديات بالمنطقة الوسطى"
+        ],
+        en: [
+          "Custom exhaust and fresh-air injection layouts for commercial kitchens and factories",
+          "Continuous air changes (ACH) and make-up air setups to achieve balanced room pressures",
+          "Installation of certified commercial exhaust fans, fire dampers, and fresh air ducts",
+          "Full compliance with Saudi Civil Defense and municipality safety regulations"
+        ]
+      },
+      design: {
+        ar: [
+          "دراسة هندسية متكاملة وحساب الأحمال الحرارية الدقيقة باستخدام برامج معتمدة مثل HAP",
+          "إعداد المخططات التنفيذية (Shop Drawings) ومخططات تنسيق مسارات الخدمات (Coordination Drawings)",
+          "تصميم وتوزيع مخارج الهواء وجريلات التوزيع لضمان انتشار هادئ وانسيابي وخالٍ من التيارات",
+          "مخططات معتمدة متوافقة مع متطلبات كود البناء السعودي والهيئة السعودية للمهندسين"
+        ],
+        en: [
+          "Comprehensive engineering study and precise load planning using certified HAP software",
+          "Drafting mechanical Shop Drawings and Coordination prints to prevent utility clashes",
+          "Acoustic and airflow design of diffusers and linear grills for quiet, draft-free distribution",
+          "Certified blueprints complying fully with Saudi Building Code (SBC) requirements"
+        ]
+      },
+      duct: {
+        ar: [
+          "تصنيع مجاري الهواء (الدكت) في ورش مؤسستنا بالرياض باستخدام أحدث الماكينات والصاج المجلفن",
+          "عزل حراري خارجي وصوتي داخلي فائق الكثافة (Fiberglass / Rockwool) لمكافحة تكثف المياه",
+          "تثبيت وتدعيم مجاري الهواء بدعامات قوية وحشوات مانعة للاهتزاز والضجيج",
+          "تصنيع وتشكيل الصاج يلتزم التزاماً كاملاً بمعايير ومواصفات SMACNA العالمية"
+        ],
+        en: [
+          "Duct fabrication in our Riyadh workshop using high-gauge galvanized steel sheet metal",
+          "High-density fiberglass or rockwool thermal insulation and vapor barriers to stop condensation",
+          "Duct run supports using heavy-duty hangers and anti-vibration gaskets to isolate noise",
+          "Fabrication and joint methods conforming strictly to SMACNA international guidelines"
+        ]
+      },
+      packaged: {
+        ar: [
+          "توريد وتركيب مكيفات الباكج (Packaged Units) للصالات المفتوحة والمعارض والمساجد والفلل الكبيرة",
+          "بناء وتجهيز القواعد الخرسانية المتينة مع مخمدات الاهتزاز الفعالة على أسطح المباني",
+          "توصيل وعزل شبكات دكت الإمداد والراجع (Supply & Return) بمواد مقاومة لعوامل الطقس الخارجية",
+          "التعامل مع كبرى الماركات العالمية الرائدة مثل كاريير (Carrier)، ترين (Trane)، ويورك (York)"
+        ],
+        en: [
+          "Supply and installation of rooftop packaged units for retail halls, mosques, and villas",
+          "Rooftop concrete vibration pad construction to isolate mechanical vibration and structural noise",
+          "Supply & Return external weatherproof clad insulation wrapping for rooftop duct runs",
+          "Turnkey installations featuring premium units from Carrier, Trane, York, and Samsung"
+        ]
       }
     };
     return specsDict[key] ? specsDict[key][lang as Locale] : [];
@@ -154,6 +306,22 @@ export default function ServiceDetail({ params }: PageProps) {
                   {lang === "ar" ? "طلب تسعيرة الآن" : "Request Quote Now"}
                 </Link>
               </div>
+
+              {/* SEO Extended Content Block */}
+              {t(`services.items.${id}.extendedContent`) && (
+                <div className="flex flex-col gap-8 mt-4">
+                  {t(`services.items.${id}.extendedContent`).map((item: any, idx: number) => (
+                    <div key={idx} className="bg-white border border-gray-100 rounded-lg p-8 shadow-premium">
+                      <h2 className="text-xl md:text-2xl font-black text-brand-slate mb-4">
+                        {item.heading}
+                      </h2>
+                      <p className="text-sm md:text-base text-brand-muted leading-relaxed">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
 
             {/* Right Side Bar */}
@@ -165,6 +333,7 @@ export default function ServiceDetail({ params }: PageProps) {
                     src={getServiceImage(id)}
                     alt={t(`services.items.${id}.title`)}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 33vw"
                     className="object-cover rounded"
                     priority
                   />
