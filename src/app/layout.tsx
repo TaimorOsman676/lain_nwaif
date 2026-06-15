@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: "مؤسسة لين نوايف العقيدي للتكييف | Lain Nuawaf Al-Aqeedi Est.",
   description: "الخيار الأول للتكييف والأعمال الإلكتروميكانيكية بالرياض. تصميم، توريد وتصنيع مجاري الهواء (الدكت) وأنظمة VRF والشيلر وفق رؤية 2030.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo_symbol.png",
   },
 };
 
