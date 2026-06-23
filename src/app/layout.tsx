@@ -34,6 +34,41 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="ar" dir="rtl" className={`${cairo.variable} ${inter.variable}`} suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                if (typeof window === 'undefined' || !window.MutationObserver) return;
+                const removeAttributes = (node) => {
+                  if (node.nodeType === 1) {
+                    if (node.hasAttribute('bis_skin_checked')) {
+                      node.removeAttribute('bis_skin_checked');
+                    }
+                    node.querySelectorAll('[bis_skin_checked]').forEach((el) => {
+                      el.removeAttribute('bis_skin_checked');
+                    });
+                  }
+                };
+                const observer = new MutationObserver((mutations) => {
+                  mutations.forEach((mutation) => {
+                    if (mutation.type === 'attributes' && mutation.attributeName === 'bis_skin_checked') {
+                      mutation.target.removeAttribute('bis_skin_checked');
+                    }
+                    if (mutation.type === 'childList') {
+                      mutation.addedNodes.forEach(removeAttributes);
+                    }
+                  });
+                });
+                observer.observe(document.documentElement, {
+                  childList: true,
+                  subtree: true,
+                  attributes: true,
+                  attributeFilter: ['bis_skin_checked']
+                });
+              })();
+            `,
+          }}
+        />
       </head>
       <body className="bg-brand-bg text-brand-slate min-h-screen flex flex-col transition-all duration-300 pb-20 md:pb-0" suppressHydrationWarning>
         {/* Google Tag (gtag.js) */}
