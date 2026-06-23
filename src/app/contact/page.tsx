@@ -63,8 +63,8 @@ export default function Contact() {
                     <a
                       href="tel:+966530985071"
                       onClick={() => {
-                        if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
-                          (window as any).gtag_report_conversion();
+                        if (typeof window !== "undefined" && (window as any).gtag_report_phone_conversion) {
+                          (window as any).gtag_report_phone_conversion();
                         }
                       }}
                       className="text-sm font-bold text-brand-yellowDark hover:underline no-underline"

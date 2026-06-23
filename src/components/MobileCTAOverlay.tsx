@@ -31,8 +31,8 @@ export default function MobileCTAOverlay() {
       <a
         href="tel:+966530985071"
         onClick={() => {
-          if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
-            (window as any).gtag_report_conversion();
+          if (typeof window !== "undefined" && (window as any).gtag_report_phone_conversion) {
+            (window as any).gtag_report_phone_conversion();
           }
         }}
         className="flex-1 flex items-center justify-center gap-2 py-3 bg-brand-yellow hover:bg-brand-yellowDark active:scale-95 text-brand-slate font-extrabold text-sm rounded-full transition-all shadow-[0_4px_12px_rgba(255,204,0,0.25)] no-underline"
