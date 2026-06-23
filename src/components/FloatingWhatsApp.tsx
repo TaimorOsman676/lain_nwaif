@@ -11,6 +11,11 @@ export default function FloatingWhatsApp() {
       href="https://wa.me/966530985071"
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => {
+        if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+          (window as any).gtag_report_conversion();
+        }
+      }}
       className={`fixed bottom-8 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-xl transition-all duration-300 hover:scale-110 hover:bg-[#128C7E] ${
         dir === "rtl" ? "left-8" : "right-8"
       }`}

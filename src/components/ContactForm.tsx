@@ -29,6 +29,12 @@ export default function ContactForm() {
     try {
       // Simulate API submit latency
       await new Promise((resolve) => setTimeout(resolve, 1500));
+      
+      // Trigger Google Ads conversion tracking
+      if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+        (window as any).gtag_report_conversion();
+      }
+
       setStatus("success");
       setFormData({
         name: "",

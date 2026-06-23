@@ -82,6 +82,21 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-18153816282');
+
+            window.gtag_report_conversion = function(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                  'send_to': 'AW-18153816282/EiBfCKiWuMMcENqBtdBD',
+                  'value': 1.0,
+                  'currency': 'SAR',
+                  'event_callback': callback
+              });
+              return false;
+            };
           `}
         </Script>
 

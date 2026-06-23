@@ -60,13 +60,26 @@ export default function Contact() {
                     <h4 className="text-sm font-bold text-brand-slate mb-1">
                       {lang === "ar" ? "رقم الهاتف المباشر" : "Direct Phone Call"}
                     </h4>
-                    <a href="tel:+966530985071" className="text-sm font-bold text-brand-yellowDark hover:underline no-underline">
+                    <a
+                      href="tel:+966530985071"
+                      onClick={() => {
+                        if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+                          (window as any).gtag_report_conversion();
+                        }
+                      }}
+                      className="text-sm font-bold text-brand-yellowDark hover:underline no-underline"
+                    >
                       {t("contact.phone")}
                     </a>
                     <a
                       href="https://wa.me/966530985071"
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => {
+                        if (typeof window !== "undefined" && (window as any).gtag_report_conversion) {
+                          (window as any).gtag_report_conversion();
+                        }
+                      }}
                       className="text-[#25D366] text-xs font-bold block mt-1 hover:underline no-underline"
                     >
                       {lang === "ar" ? "المراسلة المباشرة عبر واتساب" : "Chat on WhatsApp"}
